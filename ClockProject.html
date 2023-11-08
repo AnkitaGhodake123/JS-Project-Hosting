@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="refresh" content="1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clock Using Date And Time Function</title>
+	<style type="text/css">
+	  *
+     {
+	    margin: 0px;
+	    padding: 0px;
+	    box-sizing: border-box;
+	    font-size: 20px;
+	    font-family: sans-serif;
+     }
+	.clockname
+    {
+       color: red;
+       font-family: fantasy;
+       font-size: 50px;
+       background-color: black;
+       margin-top: 30px;
+    }
+    .clock
+    {
+    	height: 100vh;
+		width: 100vw;
+		background-color: skyblue;
+		align: center;
+		padding-top: 50px;
+		margin-top: 10px;
+	}
+	</style>
+</head>
+<body align="center">
+	<h1 class="clockname" align="center">Digital Clock</h1>
+    <div class="clock" align="center">
+   
+    <script type="text/javascript">
+		let dat=new Date()
+		let dt=dat.getDate()
+		let mnth=dat.getMonth()+1
+		let yr=dat.getFullYear()
+		document.write("Today's Date :"+dt+"/"+mnth+"/"+yr+"<br>")
+
+		let tm=new Date()
+		let hr=tm.getHours()
+		let mn=tm.getMinutes()
+		let sc=tm.getSeconds()
+		// let ms=tm.getMilliseconds()
+		document.write("Current Time :"+hr+":"+mn+":"+sc+"<br>")
+	</script>
+   </div>
+</body>
+</html>
