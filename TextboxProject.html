@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text Box</title>
+	<style type="text/css">
+		.main-div
+		{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100vh;
+			width: 100%;
+			background-image: linear-gradient(to right,#7327f5,#6b5394,#7b7487);
+			justify-content: center;
+			align-items: center;
+			padding-top: 150px;
+		}
+		.main-div div
+		{
+			height: 300px;
+			width: 350px;
+			background-color: white;
+			padding: 30px;
+			border-radius: 20px;
+			margin-left: 480px;
+			margin-top: -20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-div">
+	  <div align="center">
+		<h1>Text Box</h1>
+		<textarea id="data" onkeypress="changeInfo()" autofocus cols="40" rows="10"></textarea><br><br>
+		<button onclick="uc()">Uppercase</button>
+		<button onclick="lc()">Lowercase</button>
+		<h2 id="dinfo"></h2>
+	  </div>
+	</div>
+	<script type="text/javascript">
+		let dop=document.getElementById('dinfo')
+		dop.innerHTML="0 characters and 0 words";
+		let dt;
+		function changeInfo()
+		{
+			dt=document.getElementById('data').value
+		    dop.innerHTML=(dt.length+1)+" characters and "+(dt.split(' ').length)+" words";
+		}
+		function uc() 
+		{
+			let cdata=document.getElementById("data").value
+			data.value=cdata.toUpperCase();
+		}
+		function lc() 
+		{
+			let cdata=document.getElementById("data").value
+			data.value=cdata.toLowerCase();
+		}
+	</script>
+
+</body>
+</html>
